@@ -1,0 +1,13 @@
+div {
+    border: solid black 2px;
+}
+
+.divRow {
+    display: flex;
+    align-content: stretch;
+
+}
+.innerDiv {
+    width: 100%;
+    height: 30px;
+}
