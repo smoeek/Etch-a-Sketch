@@ -1,10 +1,7 @@
 const container = document.querySelector('.container');
 const btn = document.querySelector('button');
 let divNum = 16;
-btn.addEventListener('click', () => {
-    divNum = prompt('Enter the amount of squares you want');
-    creatingDivs();
-})
+
 
 function creatingDivs() {
 for (let i = 0; i < divNum; i++) {
@@ -23,7 +20,16 @@ for (let i = 0; i < divNum; i++) {
 };
 creatingDivs();
 
-
+btn.addEventListener('click', () => {
+    divNum = prompt('Enter the amount of squares you want');
+    if (divNum > 100) {
+        divNum = 100;
+    };
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    };
+    creatingDivs();
+});
 
 
 // let person = prompt("Please enter your name", "Harry Potter");
