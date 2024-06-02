@@ -24,6 +24,9 @@ btn.addEventListener('click', () => {
     divNum = prompt('Enter the amount of squares you want');
     if (divNum > 100) {
         divNum = 100;
+    }
+    else if (typeof divNum !== number) {
+        divNum = 16;
     };
     while (container.firstChild) {
         container.removeChild(container.firstChild);
@@ -31,9 +34,3 @@ btn.addEventListener('click', () => {
     creatingDivs();
 });
 
-
-// let person = prompt("Please enter your name", "Harry Potter");
-//   if (person != null) {
-//     document.getElementById("demo").innerHTML =
-//     "Hello " + person + "! How are you today?";
-//   }
