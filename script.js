@@ -1,7 +1,11 @@
 const container = document.querySelector('.container');
 const btn = document.querySelector('button');
 let divNum = 16;
-
+// let color;
+// function getRandomColor() {
+//     return color = 'rgb(' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ')' ;
+// };
+// console.log(getRandomColor());
 
 function creatingDivs() {
 for (let i = 0; i < divNum; i++) {
@@ -12,7 +16,7 @@ for (let i = 0; i < divNum; i++) {
         divs.setAttribute('class', 'innerDiv');
         divRow.appendChild(divs);
         divs.addEventListener('mouseover', () => {
-            divs.style.backgroundColor = 'blue';
+            divs.style.backgroundColor = 'rgb(' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ', ' + Math.floor(Math.random() * 256) + ')' ;
         })
     }
     container.appendChild(divRow);
@@ -25,9 +29,6 @@ btn.addEventListener('click', () => {
     if (divNum > 100) {
         divNum = 100;
     }
-    else if (typeof divNum !== number) {
-        divNum = 16;
-    };
     while (container.firstChild) {
         container.removeChild(container.firstChild);
     };
